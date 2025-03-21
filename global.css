@@ -1,0 +1,164 @@
+/*--------------------------------------
+  Global Box Sizing & Reset
+--------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*--------------------------------------
+  Base Styles & Typography
+--------------------------------------*/
+body {
+  margin: 0;
+  font-family: 'Merriweather', Georgia, serif;
+  color: #ddd;
+  line-height: 1.6;
+  overflow-y: auto;
+  /* Ensure content is not hidden behind fixed header */
+  padding-top: 70px;
+}
+
+/*--------------------------------------
+  Container
+--------------------------------------*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/*--------------------------------------
+  Fixed Header
+--------------------------------------*/
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header .logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/*--------------------------------------
+  Modal (Shared)
+--------------------------------------*/
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1500px;
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  color: #ddd;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.modal.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal .modal-content {
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #ddd;
+}
+
+/*--------------------------------------
+  Global Link Styling
+--------------------------------------*/
+a {
+  color: #ccb359;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #e6c781;
+}
+
+/*--------------------------------------
+  Footer Styling (Polished & Professional)
+--------------------------------------*/
+.site-footer {
+  background: #222;             /* Dark background */
+  color: #ddd;                  /* Light text */
+  padding: 5px 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.footer-nav ul li a {
+  color: #A7C7E7;             /* Soft pastel blue (you can change to peach if you like) */
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #F8C471;             /* Peach shade on hover */
+}
+
+.site-footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/*--------------------------------------
+  Subtle Fade-in Animation for Sections
+--------------------------------------*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
