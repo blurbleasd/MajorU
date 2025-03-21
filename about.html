@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Major University Press | About</title>
+  <!-- Load the final about.css after any global.css -->
+  <link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/about.css">
+<script defer src="js/global.js"></script>
+<script defer src="js/about.js"></script>
+</head>
+<body class="about-page">
+  <!-- Shared Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Major University Press Logo">
+      </a>
+    </div>
+  </header>
+  
+  
+  
+  <main class="about-container">
+    <!-- About Information Section -->
+    <section class="about-info">
+      <h1>About Major University Press</h1>
+      <p>
+        Major University Press is a long-esteemed publisher dedicated to literary innovation and the preservation of unique voices in contemporary writing.
+        We are committed to producing thought-provoking and high‑quality works that challenge conventional narratives.
+      </p>
+    </section>
+    
+    <hr class="section-divider">
+    
+    <!-- Submissions Section -->
+    <section class="submissions-section">
+      <h2>Submissions</h2>
+      <p>
+       We are not presently accepting unsolicited submissions.
+      </p>
+    </section>
+    
+    <hr class="section-divider">
+    
+    <!-- Featured Books Section -->
+    <section class="featured">
+      <h2>Featured Titles</h2>
+      <div id="featured-books" class="featured-grid"></div>
+    </section>
+    
+    <hr class="section-divider">
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Contact</h2>
+      <div class="contact-form-wrapper">
+        <form id="contact-form" action="https://formspree.io/f/mupress@proton.me" method="POST" enctype="multipart/form-data">
+          
+          <!-- Message Category -->
+          <label for="message-type">Category:</label>
+          <select id="message-type" name="message-type">
+            <option value="feedback">Feedback</option>
+            <option value="press">Press/Media Inquiry</option>
+            <option value="photo">Photo Submission</option>
+          </select>
+          
+          <!-- Email + Newsletter Row -->
+          <label for="email">Email (optional):</label>
+          <div class="email-newsletter">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              class="newsletter-email"
+            />
+            <input
+              type="checkbox"
+              name="newsletter-consent"
+              id="newsletter-consent"
+              style="vertical-align: middle;"
+            />
+            <span class="newsletter-text">Sign up for newsletter</span>
+          </div>
+          
+          <!-- File Upload (only appears for Photo Submission) -->
+          <div id="photo-upload" class="photo-upload">
+            <label for="photo">Upload Photo:</label>
+            <input type="file" name="photo" id="photo" accept="image/*">
+          </div>
+          
+          <!-- Message Textarea -->
+          <label for="message">Your Message:</label>
+          <textarea name="message" id="message" required></textarea>
+          
+          <!-- Submit Button -->
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer with modal links -->
+  <footer class="site-footer fade-in">
+    <div class="container">
+      <p style="color: #333;">&copy; 2025 Major University Press. All rights reserved.</p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="#privacy-modal" class="modal-link">Privacy Policy</a></li>
+          <li><a href="#terms-modal" class="modal-link">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Modal for Terms of Service -->
+<!-- The modal container, no longer relying on :target -->
+<div id="terms-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">&times;</a>
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing, browsing, or otherwise utilizing this website, you acknowledge and agree to be bound by the following terms 
+    and conditions (hereinafter referred to as the "Agreement"). If you do not consent to these terms, in whole or in part, 
+    you must immediately discontinue use of this website. We reserve the right to update, modify, or replace any portion of this 
+    Agreement at our sole discretion, and continued use of this website following any changes constitutes acceptance of such 
+    modifications. It is your responsibility to periodically review these terms to stay informed of any updates.</p>
+
+    <h2>2. User Obligations and Prohibited Conduct</h2>
+    <p>You agree to use this website solely for lawful purposes and in compliance with all applicable local, national, and 
+    international laws and regulations. You expressly agree not to engage in any activity that may: (i) disrupt, damage, or 
+    interfere with the proper functioning of this website; (ii) infringe upon any intellectual property rights, proprietary 
+    rights, or privacy rights of others; (iii) involve unauthorized access to restricted areas of the website, servers, or 
+    networks; (iv) transmit, upload, or distribute malicious software, spam, or any form of unsolicited communications; or 
+    (v) engage in fraudulent, misleading, or deceptive practices. Failure to comply with these obligations may result in 
+    immediate termination of access and potential legal action.</p>
+
+    <h2>3. Limitation of Liability</h2>
+    <p>Under no circumstances shall this website, its owners, affiliates, licensors, service providers, employees, or agents 
+    be held liable for any direct, indirect, incidental, consequential, or punitive damages arising from the use or inability 
+    to use this website, including but not limited to errors, omissions, data loss, service interruptions, or unauthorized 
+    access. Your use of this website is at your own risk, and all content is provided on an "as is" and "as available" basis, 
+    without any warranties, express or implied, including but not limited to warranties of merchantability, fitness for a 
+    particular purpose, or non-infringement.</p>
+
+    <h2>4. Governing Law and Dispute Resolution</h2>
+    <p>This Agreement shall be governed by and construed in accordance with the laws of the jurisdiction in which this website 
+    is operated, without regard to its conflict of law provisions. Any disputes arising from or related to this Agreement shall 
+    be resolved exclusively through binding arbitration or mediation, as determined by us, unless prohibited by applicable law. 
+    You expressly waive any right to participate in class action lawsuits or jury trials related to any disputes arising from 
+    your use of this website.</p>
+
+    <h2>5. Termination and Modifications</h2>
+    <p>We reserve the right to terminate or restrict your access to this website at any time, with or without cause, and 
+    without prior notice. Additionally, we retain the right to modify, suspend, or discontinue any aspect of this website, 
+    including but not limited to content, features, services, and availability, at our sole discretion, without liability to you 
+    or any third party.</p>
+
+    <h2>6. Contact Information</h2>
+    <p>If you have any questions, concerns, or inquiries regarding these Terms and Conditions, please contact us via the 
+    designated communication channels provided on this website.</p>
+  </div>
+</div>
+<!-- The modal container, no longer relying on :target -->
+<div id="privacy-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">&times;</a>
+    <h2>1. Collection and Use of Personal Information</h2>
+    <p>In the course of your interaction with this website, we may collect various categories of personally identifiable 
+    information (PII) and non-personally identifiable information (Non-PII), including but not limited to your name, email 
+    address, IP address, device identifiers, geolocation data, and browsing behavior. This data may be acquired through 
+    voluntary submission (e.g., contact forms, newsletter sign-ups) or automatically via cookies, tracking pixels, and similar 
+    technologies. The information collected is used to enhance user experience, analyze traffic patterns, enforce security 
+    measures, and, where applicable, deliver targeted content and advertising. By using this website, you consent to the 
+    collection, processing, and potential transfer of your data, subject to applicable legal and regulatory requirements. You may 
+    opt out of certain tracking mechanisms through browser settings, but doing so may affect site functionality.</p>
+
+    <h2>2. Data Retention, Sharing, and Third-Party Services</h2>
+    <p>We retain your personal data only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, 
+    comply with legal obligations, resolve disputes, and enforce agreements. Your information may be shared with third-party 
+    service providers engaged in hosting, analytics, payment processing, or content delivery, provided such entities adhere to 
+    industry-standard data protection measures. Additionally, data may be disclosed in response to lawful government requests, 
+    subpoenas, or to protect our rights and the rights of others. While we implement commercially reasonable safeguards to 
+    protect user data, we cannot guarantee absolute security against unauthorized access, interception, or data breaches. Users 
+    assume all risks associated with data transmission over the internet and are encouraged to exercise caution when sharing 
+    sensitive information online.</p>
+  </div>
+</div>
+</body>
+</html>
